@@ -21,7 +21,7 @@ export default function ChatPage() {
   // Connect socket
   useEffect(() => {
     if (!token) return;
-    socketRef.current = io('http://localhost:5000', {
+    socketRef.current = io('https://flashchat-server-job2.onrender.com', {
       auth: { token },
       transports: ['websocket'],
     });
